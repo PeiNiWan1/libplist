@@ -5,7 +5,12 @@ on:
   pull_request:
   schedule:
     - cron: '0 0 1 * *'
-
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "运行环境"
+        required: true
+        default: "production"
 jobs:
   build-linux-ubuntu:
     runs-on: ubuntu-latest
