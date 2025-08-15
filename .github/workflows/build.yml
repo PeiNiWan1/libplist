@@ -140,7 +140,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: autogen
-      run: ./autogen.sh CC=gcc CXX=g++ --enable-debug --enable-static --disable-shared
+      run: ./autogen.sh CC=gcc CXX=g++ --enable-debug --enable-static 
     - name: make
       run: make
     - name: make check
